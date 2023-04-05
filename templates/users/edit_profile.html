@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% block head_title %}Edit profile{% endblock %}
+
+{% block content %}
+<div class="container">
+  <div class="row">
+    <div class="col-6">
+      <h2 class="my-5" style="color: white;">Edit profile</h2>
+      <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="form-group">
+          <label for="id_username" style="color: white;">{{ form.username.label }}</label>
+          <input type="text" class="form-control {% if form.username.errors %}is-invalid{% endif %}" id="id_username"
+            name="username" value='{{ form.username.value|default:user.username }}'>
+          {% if form.username.errors %}
+          <div class="invalid-feedback">{{ form.username.errors }}</div>
+          {% endif %}
+        </div>
+
+        <div class="form-group">
+          <label for="id_about_me" style="color: white;">{{ form.about_me.label }}</label>
+          <textarea type="text" class="form-control {% if form.about_me.errors %}is-invalid{% endif %}" id="id_about_me"
+            name="about_me" value='{{ form.about_me.value }}' rows="5" style="color: white;"></textarea>
+          {% if form.about_me.errors %}
+          <div class="invalid-feedback">{{ form.about_me.errors }}</div>
+          {% endif %}
+        </div>
+
+        <div class="form-group">
+          <label for="id_image" style="color: white;">{{ form.image.label }}</label><br>
+          <input type="file" class="{% if form.image.errors %}is-invalid{% endif %}" id="id_image" name="image"
+            accept="image/*" style="color: white;">
+          {% if form.image.errors %}
+          <div class="invalid-feedback">{{ form.image.errors }}</div>
+          {% endif %}
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="background-color: purple; color: white; border: 1px solid white;">Submit</button>
+      </form>
+      <br>
+    </div>
+  </div>
+</div>
+{% endblock content %}
