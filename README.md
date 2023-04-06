@@ -2,7 +2,7 @@
 
 A simple and customizable blog application built with Django. It allows users to create, edit, and delete blog posts, as well as leave comments on posts and log in using their GitHub account.
 
-- ![img](Django_Blog/media/profile_image/0.png)
+- ![img](0.png)
 
 ## Features
 
