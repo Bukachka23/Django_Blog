@@ -26,7 +26,7 @@ You will need Python (version 3.6 or higher) and pip installed on your local mac
 1. Clone this repository:
 - git clone https://github.com/your_username/your_repository.git
 
-2.cChange the working directory to the project root:
+2. Change the working directory to the project root:
 - cd your_repository
 
 3. Create a virtual environment:
