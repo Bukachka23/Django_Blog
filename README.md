@@ -28,31 +28,45 @@ You will need Python (version 3.6 or higher) and pip installed on your local mac
 ## Installation
 
 1. Clone this repository:
-- git clone https://github.com/your_username/your_repository.git
+```
+git clone https://github.com/your_username/your_repository.git
+```
 
-2. Change the working directory to the project root:
-- cd your_repository
+4. Change the working directory to the project root:
+```
+cd your_repository
+```
 
 3. Create a virtual environment:
-- python -m venv venv
+```
+python -m venv venv
+```
 
 4. Activate the virtual environment:
 - On Windows: venv\Scripts\activate
 - On macOS and Linux:- source venv/bin/activate
 
 5. Install the required packages:
-- pip install -r requirements.txt
+```
+pip install -r requirements.txt
+```
 
 6. Apply migrations:
-- python manage.py migrate
+```
+python manage.py migrate
+```
 
 7. Create a superuser:
-- python manage.py createsuperuser
+```
+ython manage.py createsuperuser
+```
 
 8. Run the development server:
-- python manage.py runserver
-- Now, the application should be accessible at http://127.0.0.1:8000/.
+```
+python manage.py runserver
+```
 
+Now, the application should be accessible at http://127.0.0.1:8000/.
 
 ## Deployment
 To deploy this project on a live system, you can follow the official Django deployment guide: Deploying Django.
